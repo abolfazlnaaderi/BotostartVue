@@ -196,9 +196,9 @@
           </div>
         </div>
         <div class="cart-login-btns">
-          <div class="cart-btn">
-            <div>
-              <router-link to="/cart">
+          <router-link to="/cart">
+            <div class="cart-btn">
+              <div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="22px" fill="#7e57c2" viewBox="0 0 24.661 24.019">
                   <g transform="translate(0.5 -5.528)">
                     <g transform="translate(0 6.028)">
@@ -220,9 +220,9 @@
                 </svg>
                 <span v-if="countCartItems === 0" class="badge-cart d-none">{{ countCartItems }}</span>
                 <span v-else class="badge-cart">{{ countCartItems }}</span>
-              </router-link>
+              </div>
             </div>
-          </div>
+          </router-link>
           <router-link class="login-router" to="/login">
             <div class="login-btn">
               <div>
@@ -365,7 +365,8 @@ header .MuiContainer-root {
   padding: 15px;
   border-radius: 20px;
 }
-.login-btn{
+
+.login-btn {
   padding: 15px 30px;
 }
 
@@ -447,9 +448,13 @@ header .MuiContainer-root {
     color: #000;
   }
 
-  .cart-btn,
-  .login-btn {
+  .cart-btn {
     padding: 9px;
+    border-radius: 15px;
+  }
+
+  .login-btn {
+    padding: 9px 20px;
     border-radius: 15px;
   }
 
