@@ -48,7 +48,7 @@ const cart = {
             updateLocalStorage(state.cart);
         }
     },
-    actions: {
+    actions:    {
         addToCart({commit}, course) {
             try {
                 console.log(course, commit);

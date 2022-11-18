@@ -88,11 +88,9 @@ const courses = {
         allCourses(state) {
             return state.courses
         },
-        filterFree(state) {
-            state.courses.filter(course => course.price === 0)
-        }
     },
-
+    mutations: {},
+    actions: {}
 };
 
 export default courses;

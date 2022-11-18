@@ -82,6 +82,7 @@ export default {
       store.dispatch("cart/addToCart", course)
     }
 
+
     return {courses, addToCartAction}
   }
 
