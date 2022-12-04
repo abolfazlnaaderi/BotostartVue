@@ -1,20 +1,22 @@
 <template>
-    
+
   <div class="container my-3 " dir="rtl">
     <div class="row">
       <div class="col-md-4 border rounded p-4 mx-3">
         <Form class="" @submit="onSubmit">
           <label for="exampleInputText" class="form-label fs-6">نام و نام خانوادگی:</label>
-          <Field class="form-control mb-2" id="exampleInputText" name="text" type="text" :rules="validateName"/>
+          <Field class="form-control mb-2" id="exampleInputText" name="text" type="text" :rules="validateName"
+                 :validateOnInput="true"/>
           <ErrorMessage class="fs-8 text-danger my-3" name="text"/>
 
           <label for="exampleInputEmail" class="form-label fs-6">ایمیل:</label>
-          <Field class="form-control" id="exampleInputEmail" name="email" type="email" :rules="validateEmail"/>
+          <Field class="form-control" id="exampleInputEmail" name="email" type="email" :rules="validateEmail"
+                 :validateOnInput="true"/>
           <ErrorMessage class="fs-8 text-danger my-3" name="email"/>
 
           <label for="exampleInputPassword" class="form-label fs-6 mt-2">رمز عبور:</label>
           <Field class="form-control mb-2" id="exampleInputPassword" name="password" type="password"
-                 :rules="validatePassword"/>
+                 :rules="validatePassword" :validateOnInput="true"/>
           <ErrorMessage class="fs-8 text-danger my-3" name="password"/>
 
 
@@ -42,7 +44,6 @@ export default {
     ErrorMessage
   },
   setup() {
-
 
 
     function onSubmit() {
