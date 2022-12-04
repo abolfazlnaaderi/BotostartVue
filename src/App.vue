@@ -1,19 +1,19 @@
 <template>
   <HeaderWeb/>
   <router-view></router-view>
-  <FooterWeb/>
+  <FooterPage/>
 </template>
 
 <script>
 import {useDark, useToggle} from '@vueuse/core';
 import HeaderWeb from "@/components/Theme Builder/HeaderWeb.vue";
-import FooterWeb from "@/components/Theme Builder/FooterWeb";
+import FooterPage from "@/components/Theme Builder/FooterPage.vue";
 
 export default {
   name: 'App',
   components: {
-    FooterWeb,
     HeaderWeb,
+    FooterPage
   },
   setup() {
 

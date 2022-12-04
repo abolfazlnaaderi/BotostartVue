@@ -1,5 +1,5 @@
 <template>
-  <section v-if="cartItems.length == 0" class="my-5 empty-section">
+  <section v-if="cartItems.length === 0" class="my-5 empty-section">
     <div class="container text-center">
       <div class="row">
         <div class="mb-4"><p class="empty-text" dir="rtl">متاسفانه سبد خرید شما خالی است!</p></div>
@@ -77,7 +77,8 @@
               <div class="col-9">
                 <h6 class="fw-bold text-start mb-4" dir="rtl">{{ item.name }}</h6>
                 <div class="d-flex flex-row-reverse justify-content-between">
-                  <div><p dir="rtl">{{ item.price }}<span class="ms-1">تومان</span></p></div>
+                  <div v-if="item.price > 1"><p dir="rtl">{{ item.price }}<span class="ms-1">تومان</span></p></div>
+                  <div v-else><p dir="rtl"><span class="ms-1 text-success">رایگان</span></p></div>
                   <div>
                     <button @click="removeFromCart(item.id)" class="btn-cart">
                       <i class="bi bi-trash2"></i>

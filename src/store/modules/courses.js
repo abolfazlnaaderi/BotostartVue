@@ -88,6 +88,9 @@ const courses = {
         allCourses(state) {
             return state.courses
         },
+        filterFree(state) {
+            state.courses = state.courses.filter(course => course.free)
+        }
     },
     mutations: {},
     actions: {}

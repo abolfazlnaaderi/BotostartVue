@@ -34,7 +34,7 @@
             <div class="signin-status">{{ singninStatus }}</div>
             <div class="icons mt-2">
               <span>
-                <img :src="socialIcon.whatsapp" alt="واتساپ">
+                <router-link to="/veeValidation"><img :src="socialIcon.whatsapp" alt="واتساپ"></router-link>
               </span>
               <span class="mx-4">
                 <img :src="socialIcon.telegram" alt="تلگرام">
@@ -100,7 +100,9 @@ export default {
         ifSednData.value = false;
       }
 
+
       if (ifSednData.value) {
+
         axios
             .post("https://jsonplaceholder.typicode.com/posts", {
               title: form.usernameInput,
