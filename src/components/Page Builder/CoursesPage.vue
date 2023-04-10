@@ -37,7 +37,7 @@
                     fill="#5e81d1"></path></g></svg>
                 <span class="ms-2 fw-semibold">{{ course.person }}  نفر</span>
               </span>
-              <div v-if="course.price > 1" class="price-courses fw-semibold">{{ course.price }} تومان</div>
+              <div v-if="course.price > 1" class="price-courses fw-semibold">{{ numberFormat(course.price) }} تومان</div>
               <div v-else class="price-courses fw-bold">رایگان</div>
             </div>
             <hr class="divider-middle">
@@ -68,9 +68,11 @@ import {useTitle} from '@vueuse/core';
 import {computed} from "vue";
 import {useStore} from "vuex";
 
+
 export default {
   name: "CoursesPage",
   setup() {
+    
     const title = useTitle();
     title.value = 'دوره های آموزش برنامه نویسی | پروژه محور | پشتیبانی دائمی | بوتواستارت';
 
@@ -82,8 +84,12 @@ export default {
       store.dispatch("cart/addToCart", course)
     }
 
+    const numberFormat = (number) => {
+    return new Intl.NumberFormat().format(number);
+}
 
-    return {courses, addToCartAction}
+
+    return {courses, addToCartAction,numberFormat}
   }
 
 }

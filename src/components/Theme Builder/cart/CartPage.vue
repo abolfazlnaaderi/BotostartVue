@@ -77,7 +77,7 @@
               <div class="col-9">
                 <h6 class="fw-bold text-start mb-4" dir="rtl">{{ item.name }}</h6>
                 <div class="d-flex flex-row-reverse justify-content-between">
-                  <div v-if="item.price > 1"><p dir="rtl">{{ item.price }}<span class="ms-1">تومان</span></p></div>
+                  <div v-if="item.price > 1"><p dir="rtl">{{ numberFormat(item.price) }}<span class="ms-1">تومان</span></p></div>
                   <div v-else><p dir="rtl"><span class="ms-1 text-success">رایگان</span></p></div>
                   <div>
                     <button @click="removeFromCart(item.id)" class="btn-cart">
@@ -152,7 +152,7 @@
           <div class="p-4 shadow-cart mt-4 rounded-3">
             <div class="top-chechout d-flex flex-row-reverse justify-content-between">
               <div dir="rtl"><p>جمع کل:</p></div>
-              <div dir="rtl"><p>{{ cartTotalAmount }} تومان</p></div>
+              <div dir="rtl"><p>{{ numberFormat(cartTotalAmount) }} تومان</p></div>
             </div>
             <hr>
             <div class="discount-box d-flex flex-row-reverse justify-content-between mt-4">
@@ -167,7 +167,7 @@
             </div>
             <div class="d-flex flex-row-reverse justify-content-between">
               <div><p dir="rtl">قابل پرداخت:</p></div>
-              <div><p dir="rtl" class="text-success">{{ cartTotalAmount }} تومان</p></div>
+              <div><p dir="rtl" class="text-success">{{ numberFormat(cartTotalAmount) }} تومان</p></div>
             </div>
             <div class="mt-4">
               <a href="https://sepehr.shaparak.ir:8080/Mpay" target="_blank ">
@@ -235,7 +235,12 @@ export default {
       }
     }
 
-    return {emptyCart, cartItems, cartTotalAmount, removeFromCart, clearAllCart, discountValue, sendDiscountCode}
+
+    const numberFormat = (number) => {
+    return new Intl.NumberFormat().format(number);
+}
+
+    return {emptyCart, cartItems, cartTotalAmount, removeFromCart, clearAllCart, discountValue, sendDiscountCode, numberFormat}
   }
 }
 </script>
