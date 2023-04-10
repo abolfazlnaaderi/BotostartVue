@@ -2,7 +2,7 @@
   <section>
     <div class="container text-center">
       <div class="row flex-column-reverse flex-lg-row align-items-center px-4">
-        <div class="col col-lg-8">
+        <div class="col col-lg-8 d-none d-md-block">
           <div class="slider text-center">
             <div class="slider-contents">
               <div>

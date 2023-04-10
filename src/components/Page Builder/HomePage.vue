@@ -126,7 +126,7 @@
     <div class="MuiContainer-root instagram-field mx-auto">
       <div class="row-instagram">
         <div class="MuiGrid-item jss6">
-          <p class="pe-5 fs-4 fw-bold text-white text-center">برای دیدن آموزش های رایگان ما در اینستاگرام، <span><a
+          <p class="pe-5 fs-6 fs-md-4 fw-bold text-white text-center">برای دیدن آموزش های رایگان ما در اینستاگرام، <span><a
               href="https://www.instagram.com/javascript.front/">اینجا</a></span>
             کلیک کنید</p>
         </div>
