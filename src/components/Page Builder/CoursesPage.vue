@@ -157,6 +157,7 @@ section {
   justify-content: space-between;
   align-content: center;
   margin-bottom: 2rem;
+  align-items: center;
 }
 
 
