@@ -9,10 +9,42 @@
     font-display: auto;
 }
 
+@font-face {
+    font-family: 'Shabnam';
+    src: url('../fonts/shabnam/Shabnam-Bold.ttf') format('Shabnam-Bold.ttf'), url('../fonts/shabnam//Shabnam-Light.ttf') format('Shabnam-Light.ttf'),url('../fonts/shabnam/Shabnam-Medium.ttf') format('Shabnam-Medium.ttf'),url('../fonts/shabnam/Shabnam-Thin.ttf') format('Shabnam-Thin.ttf'),url('../fonts/shabnam/Shabnam.ttf') format('Shabnam.ttf')
+}
+
+@font-face {
+    font-family: 'Iranian-Sans';
+    src: url('../fonts/Iranian-Sans/Iranian-Sans.ttf') format('Iranian-Sans.ttf');
+}
+
+
+
+@font-face {
+    font-family: "Vazir";
+    src: url(../fonts/vazir-font/Vazir.eot);
+    /* IE9 Compat Modes */
+    src: url(../fonts/vazir-font/Vazir.eot) format("embedded-opentype"),
+    url(../fonts/vazir-font/Vazir.woff2) format("woff2"),
+    url(../fonts/vazir-font/Vazir.woff) format("woff"),
+    url(../fonts/vazir-font/Vazir.ttf) format("truetype");
+    /* Safari, Android, iOS */
+}
+
+@font-face {
+    font-family: 'Yekan-Bakh';
+    src: url('../fonts/Yekan-Bakh/iranyekanwebmedium.woff') format('iranyekanwebmedium.woff'),
+     url('../fonts/Yekan-Bakh/iranyekanwebregular.woff') format('iranyekanwebregular.woff'),
+     url('../fonts/Yekan-Bakh/YekanBakhBold.woff') format('YekanBakhBold.woff'),
+     url('../fonts/Yekan-Bakh/YekanBakhHeavy.woff') format('YekanBakhHeavy.woff'),
+     url('../fonts/Yekan-Bakh/YekanBakhMedium.woff') format('YekanBakhMedium.woff')
+     ;
+}
 
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'Yekan';
+    font-family: 'Vazir'!important; 
 }
