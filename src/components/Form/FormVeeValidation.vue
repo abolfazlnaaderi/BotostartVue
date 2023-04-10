@@ -34,6 +34,7 @@
 <script>
 import {Form, Field, ErrorMessage} from 'vee-validate';
 import Swal from "sweetalert2";
+import {inject} from "vue";
 
 
 export default {
@@ -44,10 +45,10 @@ export default {
     ErrorMessage
   },
   setup() {
+    const message = inject('msg');
 
-
-    function onSubmit() {
-
+    function onSubmit(values) {
+      console.log(values);
 
       Swal.fire({
         title: 'شما مجاز به ورود به پنل کاربری هستید',
@@ -58,6 +59,8 @@ export default {
         toast: true,
         position: 'top',
       });
+
+
     }
 
     function validateName(name) {
@@ -88,13 +91,13 @@ export default {
       // const regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
 
       if (password.length < 6) {
-        return 'لطفا رمز عبور خود را بصورت صحیح وارد نمایید!'
+        return 'رمز عبور وارده کمتر از 6 رقم می باشد!'
       }
 
       return true;
     }
 
-    return {onSubmit, validateEmail, validateName, validatePassword}
+    return {onSubmit, validateEmail, validateName, validatePassword, message}
   }
 }
 </script>

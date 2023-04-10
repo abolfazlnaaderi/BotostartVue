@@ -28,6 +28,7 @@
 <script>
 
 import {reactive, ref} from "vue";
+import axios from "axios";
 
 export default {
   name: 'FormValidate',
@@ -54,10 +55,19 @@ export default {
         form.bodyErrorText = ''
       }
       if (form.title !== '' && form.body !== '') {
-        loadingBtn.value = true;
+        // loadingBtn.value = true;
         // createPost();
       }
     }
+
+    axios.get('https://jsonplaceholder.typicode.com/users').then(res => {
+      if (res.status === 200) {
+        console.log(res.data);
+      }
+    }).catch(err => {
+      console.log(err);
+    })
+
 
     return {form, loading, validate}
   }

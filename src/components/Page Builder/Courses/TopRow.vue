@@ -58,7 +58,7 @@
           <div class="ms-3"><h4 class="fs-5 fw-bold">دوره های رایگان</h4></div>
           <div>
             <label class="toggler-wrapper style-1">
-              <input @click="filterFreeCourse" type="checkbox">
+              <input type="checkbox">
               <div class="toggler-slider">
                 <div class="toggler-knob"></div>
               </div>
@@ -71,18 +71,18 @@
 </template>
 
 <script>
-import {useStore} from "vuex";
-import {computed} from "vue";
+// import {useStore} from "vuex";
+// import {computed} from "vue";
 
 export default {
   name: "TopRow",
   props: {},
   setup() {
-    const store = useStore();
-    const filterFreeCourse = computed(() => store.getters['courses/filterFree']);
+    // const store = useStore();
+    // const filterFreeCourse = computed(() => store.getters['courses/filterFree']);
 
 
-    return {filterFreeCourse}
+    return {}
   }
 }
 </script>

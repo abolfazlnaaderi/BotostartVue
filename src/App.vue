@@ -8,6 +8,7 @@
 import {useDark, useToggle} from '@vueuse/core';
 import HeaderWeb from "@/components/Theme Builder/HeaderWeb.vue";
 import FooterPage from "@/components/Theme Builder/FooterPage.vue";
+import {provide} from "vue";
 
 export default {
   name: 'App',
@@ -20,6 +21,7 @@ export default {
     const isDark = useDark()
     const toggleDark = useToggle(isDark)
 
+    provide("msg", "Hello World");
 
     function scrollToTop() {
       window.scrollTo({

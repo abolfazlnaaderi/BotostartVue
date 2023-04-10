@@ -64,8 +64,8 @@
 
 <script>
 
-import {computed} from "vue";
 import {useTitle} from '@vueuse/core';
+import {computed} from "vue";
 import {useStore} from "vuex";
 
 export default {

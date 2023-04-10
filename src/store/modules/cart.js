@@ -24,7 +24,7 @@ const cart = {
     },
     mutations: {
         add(state, course) {
-            const item = state.cart.find(p => p.id === course.id)
+            const item = state.cart.find(p => p.id === course.id);
             if (!item) {
                 state.cart.push({
                     ...course,
@@ -48,10 +48,9 @@ const cart = {
             updateLocalStorage(state.cart);
         }
     },
-    actions:    {
+    actions: {
         addToCart({commit}, course) {
             try {
-                // console.log(course, commit);
                 commit('add', course);
 
                 Swal.fire({
