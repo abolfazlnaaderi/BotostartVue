@@ -302,8 +302,11 @@ header {
 
 header .MuiContainer-root {
   width: 100%;
-  padding: 0 6rem;
+  /* padding: 0 6rem; */
   margin: 0.5rem 0;
+  max-width: 1200px;
+  padding: 0 1rem;
+  margin: auto;
 }
 
 .MuiRow-root {
@@ -313,6 +316,7 @@ header .MuiContainer-root {
   align-content: center;
   flex-direction: row-reverse;
   align-items: center;
+  
 }
 
 .MuiBox-root {
@@ -534,6 +538,10 @@ header .MuiContainer-root {
   header {
     width: auto;
     /*padding: 8px 10px;*/
+  }
+
+  .MuiRow-root {
+    padding: 15px 0;
   }
 
   .badge-cart {
