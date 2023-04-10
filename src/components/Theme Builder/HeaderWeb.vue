@@ -8,32 +8,32 @@
         <div class="navbar-top">
           <nav>
             <ul>
-              <li>
-                <router-link class="list-nav" to="/">صفحه اصلی</router-link>
+              <li >
+                <router-link class="list-nav" :class="{ active: $route.path === '/' }" to="/">صفحه اصلی</router-link>
               </li>
               <li>
-                <router-link class="list-nav" to="/courses"
+                <router-link class="list-nav" :class="{ active: $route.path === '/courses' }" to="/courses"
                 >دوره ها
                 </router-link
                 >
               </li>
               <li>
-                <router-link class="list-nav" to="/student-comments"
+                <router-link class="list-nav" :class="{ active: $route.path === '/student-comments' }" to="/student-comments"
                 >نظرات دانشجویان
                 </router-link
                 >
               </li>
               <li class="show-more">
-                <router-link class="list-nav" to="/users">کاربران</router-link>
+                <router-link class="list-nav" :class="{ active: $route.path === '/users' }" to="/users">کاربران</router-link>
               </li>
               <li>
-                <router-link class="list-nav" :to="{ name: 'posts' }"
+                <router-link class="list-nav" :class="{ active: $route.path === '/posts' }" :to="{ name: 'posts' }"
                 >مقالات
                 </router-link
                 >
               </li>
               <li>
-                <router-link class="list-nav" to="/aboutus">درباره ما</router-link>
+                <router-link class="list-nav" :class="{ active: $route.path === '/aboutus' }" to="/aboutus">درباره ما</router-link>
               </li>
             </ul>
           </nav>
@@ -334,12 +334,19 @@ header .MuiContainer-root {
   text-decoration: none;
   color: #343434;
   transition: all ease 0.3s;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .list-nav:hover {
   color: #7e57c2;
 }
+
+.active:visited {
+  color: #7e57c2;
+}
+
+
+
 
 .cart-login-btns {
   display: flex;
