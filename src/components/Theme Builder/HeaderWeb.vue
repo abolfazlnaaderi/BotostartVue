@@ -339,6 +339,7 @@ header .MuiContainer-root {
   color: #343434;
   transition: all ease 0.3s;
   font-weight: 600;
+  font-size: 0.95rem;
 }
 
 .list-nav:hover {
